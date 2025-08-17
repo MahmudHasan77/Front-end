@@ -1,0 +1,622 @@
+.createAccount {
+  background-color: #fc3f3f;
+  background: linear-gradient(
+    50deg,
+    red,
+    blue,
+    tomato,
+    green,
+    orange,
+    blue,
+    tomato
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #0037ff;
+  animation: createAccount 5s linear infinite;
+}
+@keyframes createAccount {
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.signIn {
+  background: #ff0000;
+  background: linear-gradient(
+    50deg,
+    red,
+    blue,
+    tomato,
+    green,
+    orange,
+    blue,
+    tomato
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #0037ff;
+  animation: signIn 5s linear infinite;
+}
+@keyframes signIn {
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #949494;
+  border-radius: 15px !important;
+  /* min-height: 10px;  */
+}
+
+custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #7b7b7b !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #c2c2c2 !important;
+}
+
+.react-range-slider__track {
+  height: 5px !important;
+  background-color: orange !important;
+}
+
+.range-slider .range-slider__thumb {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  width: 10px !important;
+  height: 10px !important;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #f32121 !important;
+}
+.range-slider .range-slider__range {
+  background-color: #ff6363 !important;
+}
+
+.customshadow {
+  box-shadow: 0px 0px 20px 1px rgb(235, 235, 235);
+}
+.customshadow2 {
+  box-shadow: 0px 0px 20px 1px rgb(216, 216, 216);
+}
+
+.SideCartScroll::-webkit-scrollbar {
+  width: 5px;
+  height: 10px !important;
+  background-color: rgb(168, 168, 168);
+}
+.SideCartScroll::-webkit-scrollbar-track {
+  background-color: #e5e3e3;
+  width: 5px;
+  height: 5px !important;
+}
+.SideCartScroll::-webkit-scrollbar-thumb {
+  background-color: rgb(173, 173, 173);
+  height: 10px !important;
+  border-radius: 20px;
+}
+
+.styleScrollbar::-webkit-scrollbar {
+  width: 2px;
+  background-color: rgb(255, 255, 255);
+}
+.filterScrollbar::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+.SideCartScroll::-webkit-scrollbar-track {
+  background-color: #e5e3e3;
+  width: 5px;
+  height: 5px !important;
+}
+.styleScrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(199, 199, 199);
+  height: 5px !important;
+  border-radius: 20px;
+}
+.filterScrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(215, 215, 215);
+  height: 5px !important;
+  border-radius: 20px;
+}
+
+.hiddenScroll {
+  scrollbar-width: none;
+}
+
+.nav-link.active .link-text {
+  color: rgb(255, 111, 0);
+  opacity: 1;
+}
+
+.smLight {
+  font-size: small;
+  color: rgb(94, 93, 93);
+}
+.xsLight {
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+}
+.xsLight2 {
+  font-size: 9px;
+  color: rgb(0, 0, 0);
+}
+
+.customshadowBlack {
+  box-shadow: 0px 0px 10px 0px black;
+}
+
+/* index.css বা Tailwind  global style */
+.slick-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
+
+
+.secondSliderTitleColor {
+  background-color: tomato;
+  color: white;
+  background: linear-gradient(
+    50deg,
+    red,
+    blue,
+    tomato,
+    blue
+  );
+}
+
+.animatedTextColor {
+  background: linear-gradient(
+    50deg,
+    red,
+    blue,
+    tomato,
+    blue,
+    red,
+    blue,
+    tomato,
+    blue
+    );
+    -webkit-background-clip: text;
+  -webkit-text-fill-color:orange;
+  animation: customAnimation 3s infinite linear;
+}
+
+@keyframes customAnimation {
+  50%{
+    filter: hue-rotate(360deg);
+  }
+}
+.animatedBgColor {
+  color:white;
+  background: linear-gradient(
+    50deg,
+    red,
+    tomato,
+    red,
+    tomato
+    );
+  animation: animatedBgColor 10s infinite linear;
+}
+
+@keyframes animatedBgColor {
+  50%{
+    filter: hue-rotate(360deg);
+  }
+}
+.animatedBgCategory {
+  background: linear-gradient(
+    50deg,
+    tomato,
+    red,
+    tomato
+    );
+  animation: animatedBgCategory 10s infinite linear;
+}
+
+@keyframes animatedBgCategory {
+  50%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Style active slide */
+.secondSlider .swiper-slide-active .secondSliderTitle {
+  position: absolute;
+  top: 50%;
+  left: -240%;
+  font-size: small;
+  animation: secondSliderAnim 1s forwards;
+}
+@keyframes secondSliderAnim {
+  0% {
+    left: -240x;
+    opacity: 0;
+  }
+  100% {
+    left: 10%;
+    opacity: 0.5;
+  }
+}
+
+.secondSlider .swiper-slide-active .secondSliderButton{
+  top: 80%;
+  right: -120px;
+  animation: secondSliderButton 1s forwards;
+}
+@keyframes secondSliderButton{
+  0%{
+    right: -120px;
+  }
+  100%{
+    right: 45%;
+  }
+}
+
+
+.animatedBgSliderButton {
+  background: linear-gradient(50deg,orange,tomato,orange,tomato,orange,tomato,orange,tomato);
+}
+
+.secondSlider2 .swiper-slide-active .secondSliderShopButton2 {
+top: -100%;
+animation:secondSlider2 1s forwards ;
+}
+
+@keyframes secondSlider2 {
+  0%{
+    top: -100%;
+    opacity: 0;
+  }100%{
+    top: 80%;
+  }
+}
+.secondSlider2 .swiper-slide-active .secondSlider2Title {
+top: -150%;
+background: linear-gradient(50deg, tomato , rgb(78, 78, 232),red);
+animation:secondSlider2Title 1s forwards ;
+}
+
+@keyframes secondSlider2Title {
+  0%{
+    top: -300%;
+    opacity: 0;
+  }100%{
+    top: 60%;
+  }
+}
+.secondSlider2 .swiper-slide-prev .secondSliderShopButton2{
+  opacity: 0;
+}
+.secondSlider2 .swiper-slide-prev .secondSlider2Title{
+  opacity: 0;
+}
+/* .secondSlider2 .swiper-slide-next .secondSliderShopButton2{
+  opacity: 0;
+} */
+
+
+/* categories design*/
+.categoryC {
+  position: absolute;
+      left: 250px;
+
+      opacity: 1;
+  animation-name: categoryCAnim;
+  animation-duration: 5s;
+  animation-timing-function:ease-out;
+animation-iteration-count: infinite;  
+ left: 250px;
+}
+
+@keyframes categoryCAnim {
+  0% {
+    left: 250px;
+    opacity: 1;
+  }
+  30%{
+    left: 20px;
+        opacity: 1;
+
+  }
+  99% {
+    left: 20px;
+        opacity: 1;
+
+  }
+  100% {
+    left: 20px;
+    opacity: 0;
+  }
+}
+.categoryA {
+  position: absolute;
+      opacity: 1;
+    left: 265px;
+
+  animation-name: categoryA;
+  animation-duration: 5s;
+  animation-timing-function:ease-out;
+  animation-delay: 100ms;
+animation-iteration-count: infinite;  
+}
+
+@keyframes categoryA {
+  0% {
+    left: 265px;
+        opacity: 1;
+
+  }
+  30%{
+    left: 35px;    opacity: 1;
+
+  }
+  97% {
+    left: 35px;    opacity: 1;
+
+  }
+  100% {
+    left: 35px;
+    opacity: 0;
+  }
+}
+.categoryT{
+  position: absolute;
+      opacity: 1;
+    left: 280px;
+
+  animation-name: categoryT;
+  animation-duration: 5s;
+  animation-timing-function:ease-out;
+  animation-delay: 200ms;
+animation-iteration-count: infinite;  
+}
+
+@keyframes categoryT {
+  0% {
+    left: 280px;
+        opacity: 1;
+
+  }
+  30%{
+    left: 50px;    opacity: 1;
+
+  }
+  95% {
+    left: 50px;    opacity: 1;
+
+  }
+  100% {
+    left: 50px;
+    opacity: 0;
+  }
+}
+.categoryE{
+  position: absolute;
+      opacity: 1;
+    left: 295px;
+
+  animation-name: categoryE;
+  animation-duration: 5s;
+  animation-timing-function:ease-out;
+  animation-delay: 300ms;
+animation-iteration-count: infinite;  
+}
+
+@keyframes categoryE {
+  0% {
+    left: 295px;
+        opacity: 1;
+
+  }
+  30%{
+    left: 65px;    opacity: 1;
+
+  }
+  93% {
+    left: 65px;    opacity: 1;
+
+  }
+  100% {
+    left: 65px;
+    opacity: 0;
+  }
+}
+.categoryG{
+  position: absolute;
+      opacity: 1;
+    left: 310px;
+
+  animation-name: categoryG;
+  animation-duration: 5s;
+  animation-timing-function:ease-out;
+  animation-delay: 400ms;
+animation-iteration-count: infinite;  
+}
+
+@keyframes categoryG {
+  0% {
+    left: 310px;
+        opacity: 1;
+
+  }
+  30%{
+    left: 80px;    opacity: 1;
+
+  }
+  91% {
+    left: 80px;    opacity: 1;
+
+  }
+  100% {
+    left: 80px;
+    opacity: 0;
+  }
+}
+.categoryO{
+  position: absolute;
+      opacity: 1;
+    left: 325px;
+
+  animation-name: categoryO;
+  animation-duration: 5s;
+  animation-timing-function:ease-out;
+  animation-delay: 500ms;
+animation-iteration-count: infinite;  
+}
+
+@keyframes categoryO {
+  0% {
+    left: 325px;
+        opacity: 1;
+
+  }
+  30%{
+    left: 96px;    opacity: 1;
+
+  }
+  89% {
+    left: 96px;    opacity: 1;
+
+  }
+  100% {
+    left: 96px;
+    opacity: 0;
+  }
+}
+.categoryR{
+  position: absolute;
+      opacity: 1;
+    left: 340px;
+
+  animation-name: categoryR;
+  animation-duration: 5s;
+  animation-timing-function:ease-out;
+  animation-delay: 600ms;
+animation-iteration-count: infinite;  
+}
+
+@keyframes categoryR {
+  0% {
+    left: 340px;
+        opacity: 1;
+
+  }
+  30%{
+    left: 112px;    opacity: 1;
+
+  }
+  87% {
+    left: 112px;    opacity: 1;
+
+  }
+  100% {
+    left: 112px;
+    opacity: 0;
+  }
+}
+.categoryI{
+  position: absolute;
+      opacity: 1;
+    left: 355px;
+
+  animation-name: categoryI;
+  animation-duration: 5s;
+  animation-timing-function:ease-out;
+  animation-delay: 700ms;
+animation-iteration-count: infinite;  
+}
+
+@keyframes categoryI {
+  0% {
+    left: 355px;
+        opacity: 1;
+
+  }
+  30%{
+    left: 128px;    opacity: 1;
+
+  }
+  85% {
+    left: 128px;    opacity: 1;
+
+  }
+  100% {
+    left: 128px;
+    opacity: 0;
+  }
+}
+.categoryE2{
+  position: absolute;
+      opacity: 1;
+    left: 370px;
+
+  animation-name: categoryE2;
+  animation-duration: 5s;
+  animation-timing-function:ease-out;
+  animation-delay: 800ms;
+animation-iteration-count: infinite;  
+}
+
+@keyframes categoryE2 {
+  0% {
+    left: 370px;
+        opacity: 1;
+
+  }
+  30%{
+    left: 136px;    opacity: 1;
+
+  }
+  83% {
+    left: 136px;    opacity: 1;
+
+  }
+  100% {
+    left: 136px;
+    opacity: 0;
+  }
+}
+.categoryS{
+  position: absolute;
+      opacity: 1;
+    left: 385px;
+
+  animation-name: categoryS;
+  animation-duration: 5s;
+  animation-timing-function:ease-out;
+  animation-delay: 900ms;
+animation-iteration-count: infinite;  
+}
+
+@keyframes categoryS {
+  0% {
+    left: 385px;
+        opacity: 1;
+
+  }
+  30%{
+    left: 150px;    opacity: 1;
+
+  }
+  81% {
+    left: 150px;    opacity: 1;
+
+  }
+  100% {
+    left: 150px;
+    opacity: 0;
+  }
+}
+
+.categoriesShadow{
+  box-shadow: #ff0000 0px 0px 10px;
+}
