@@ -480,15 +480,15 @@ animation-iteration-count: infinite;
 
   }
   30%{
-    left: 96px;    opacity: 1;
+    left: 97px;    opacity: 1;
 
   }
   89% {
-    left: 96px;    opacity: 1;
+    left: 97px;    opacity: 1;
 
   }
   100% {
-    left: 96px;
+    left: 97px;
     opacity: 0;
   }
 }
@@ -511,15 +511,15 @@ animation-iteration-count: infinite;
 
   }
   30%{
-    left: 112px;    opacity: 1;
+    left: 114px;    opacity: 1;
 
   }
   87% {
-    left: 112px;    opacity: 1;
+    left: 114px;    opacity: 1;
 
   }
   100% {
-    left: 112px;
+    left: 114px;
     opacity: 0;
   }
 }
@@ -542,15 +542,15 @@ animation-iteration-count: infinite;
 
   }
   30%{
-    left: 128px;    opacity: 1;
+    left: 130px;    opacity: 1;
 
   }
   85% {
-    left: 128px;    opacity: 1;
+    left: 130px;    opacity: 1;
 
   }
   100% {
-    left: 128px;
+    left: 130px;
     opacity: 0;
   }
 }
@@ -573,15 +573,15 @@ animation-iteration-count: infinite;
 
   }
   30%{
-    left: 136px;    opacity: 1;
+    left: 139px;    opacity: 1;
 
   }
   83% {
-    left: 136px;    opacity: 1;
+    left: 139px;    opacity: 1;
 
   }
   100% {
-    left: 136px;
+    left: 139px;
     opacity: 0;
   }
 }
@@ -604,15 +604,15 @@ animation-iteration-count: infinite;
 
   }
   30%{
-    left: 150px;    opacity: 1;
+    left: 153px;    opacity: 1;
 
   }
   81% {
-    left: 150px;    opacity: 1;
+    left: 153px;    opacity: 1;
 
   }
   100% {
-    left: 150px;
+    left: 153px;
     opacity: 0;
   }
 }

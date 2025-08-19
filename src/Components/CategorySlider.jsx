@@ -15,12 +15,12 @@ const CategorySlider = () => {
           <TbTruckDelivery className="text-lg " />
           <p className="hidden md:inline">FREE ...</p>
         </div>
-        <p className=" ">free delivery now on your first order and over $200</p>
+        <p className=" ">free delivery now on your first order</p>
         <p>- only $200*</p>
       </div>
 
       <div className="text-center my-5">
-        <h2 className="text-[20px] font-bold text-white animatedBgCategory h-11 py-2 w-45 px-30 rounded-xs  mx-auto relative overflow-hidden">
+        <h2 className="text-[20px] font-bold animatedTextColor h-11 py-2 w-45 px-30 rounded-xs  mx-auto relative overflow-hidden">
           <span className={` absolute categoryC`}>C</span>
           <span className={`categoryA absolute`}>A</span>
           <span className={`categoryT absolute`}>T</span>

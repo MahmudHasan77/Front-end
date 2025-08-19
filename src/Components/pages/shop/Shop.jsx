@@ -207,8 +207,8 @@ const Shop = () => {
       {/* header  */}
       <div className=" flex  bg-zinc-50 h-10 w-full items-center border border-green-200">
         <div className=" flex items-center min-w-[33%] max-w-[33%] md:min-w-[20%] md:max-w-[20%] bg-zinc-100 border border-gray-300 px-1 h-full text-center">
-          <p className=" font-bold m-auto h-full w-ful pt-2 text-sm md:text-[15px]">
-            Filter Products
+          <p className=" font-bold m-auto h-full w-ful pt-2 text-xs md:text-[15px]">
+            Filter
           </p>
           <IconButton
             onClick={toggleDrawer}
