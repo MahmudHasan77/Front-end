@@ -10,7 +10,7 @@ const CategorySlider = () => {
   const category_list = useSelector((state) => state?.ecommerce?.categories);
   return (
     <Container className={" my-5"}>
-      <div className="animatedBgColor flex text-[11px] md:text-[15px] justify-around items-center my-3 font-bold border border-orange-300  py-3 capitalize text-white!">
+      <div className=" bg-fuchsia-500 flex text-[11px] md:text-[15px] justify-around items-center my-3 font-bold border border-orange-300  py-3 capitalize text-white!">
         <div className="flex justify-around gap-3 items-center">
           <TbTruckDelivery className="text-lg " />
           <p className="hidden md:inline">FREE ...</p>
@@ -20,7 +20,7 @@ const CategorySlider = () => {
       </div>
 
       <div className="text-center my-5">
-        <h2 className="text-[20px] font-bold text-white animatedBgCategory h-8  w-45 px-30 rounded-xs categoriesShadow mx-auto relative overflow-hidden">
+        <h2 className="text-[20px] font-bold text-white animatedBgCategory h-11 py-2 w-45 px-30 rounded-xs  mx-auto relative overflow-hidden">
           <span className={` absolute categoryC`}>C</span>
           <span className={`categoryA absolute`}>A</span>
           <span className={`categoryT absolute`}>T</span>

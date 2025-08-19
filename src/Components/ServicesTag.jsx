@@ -39,7 +39,7 @@ const ServicesTag = () => {
     <Contaner
       data-aos="fade-up"
       className={
-        "grid md:grid-cols-2 lg:grid-cols-4 gap-5 justify-center bg-gray-50 p-15 animatedTextColor "
+        "grid md:grid-cols-2 lg:grid-cols-4 gap-5 justify-center bg-gray-50 p-15"
       }
     >
       {services.map((item, index) => {
@@ -49,7 +49,12 @@ const ServicesTag = () => {
             className={"flex gap-3 items-center"}
             data-aos="fade-up"
           >
-            <span className={"text-3xl md:text-4xl lg:text-5xl text-blue-600 "} data-aos="fade-right">
+            <span
+              className={
+                "text-3xl md:text-4xl lg:text-5xl text-blue-600 animatedTextColor"
+              }
+              data-aos="fade-right"
+            >
               {item.icon}
             </span>
             <div>
