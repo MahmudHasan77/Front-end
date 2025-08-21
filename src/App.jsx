@@ -12,7 +12,7 @@ function App() {
   useAutoLogout(token);
 
   return (
-    <div>
+    <div className="">
       <HomeSlider />
       <CategorySlider />
       <NewArrivals />

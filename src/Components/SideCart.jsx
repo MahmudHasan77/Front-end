@@ -14,6 +14,7 @@ import { shopping_cart } from "../redux/EcommerceSlice";
 import toast from "react-hot-toast";
 import { RiLoader3Fill } from "react-icons/ri";
 import { RiLoader5Fill } from "react-icons/ri";
+import { FaOpencart } from "react-icons/fa";
 
 export default function SideCart() {
   const [open, setOpen] = React.useState(false);
@@ -277,12 +278,12 @@ export default function SideCart() {
     <div>
       {/* <Button onClick={toggleDrawer(true)}>Open drawer</Button> */}
       <span className=" cursor-context-menu" onClick={toggleDrawer(true)}>
-        <span className="relative group">
-          <MdShoppingCart className=" text-lg text-orange-400 hover:text-orange-500 duration-300  " />
-          <span className=" -top-2 -right-1  absolute text-white bg-orange-400  group-hover:bg-orange-500 text-[7px]   rounded-full h-3.5 w-3.5 flex items-center justify-center">
-            {totalQuantity?totalQuantity:0}
+        <div className="relative group max-w-5">
+          <FaOpencart className=" text-lg text-gray-700 hover:text-gray-900 duration-300  " />
+          <span className=" -top-3 right-0  absolute text-gray-600 border text-[7px]   rounded-full h-3.5 w-3.5 flex items-center justify-center">
+            {totalQuantity ? totalQuantity : 0}
           </span>
-        </span>
+        </div>
       </span>
       <Drawer open={open} onClose={toggleDrawer(false)} anchor={"right"}>
         {DrawerList}

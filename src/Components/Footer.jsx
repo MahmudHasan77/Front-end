@@ -39,7 +39,7 @@ const Footer = () => {
     AOS.init()
   },[])
   return (
-    <div className={"bg-gray-900 text-white p-2"} data-aos="zoom-in-up">
+    <div className={"bg-gray-900 text-white p-2 mb-5"} data-aos="zoom-in-up">
       <Container
         className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 "}
       >

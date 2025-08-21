@@ -69,8 +69,8 @@ const HeaderNavigation = () => {
               spaceBetween={20}
               slidesPerView={4}
               breakpoints={{
-                0: { slidesPerView: 3 },
-                600: { slidesPerView: 4 },
+                0: { slidesPerView: 4 },
+                600: { slidesPerView: 5 },
                 940: { slidesPerView: 5 },
                 1024: { slidesPerView:7 },
               }}
@@ -89,7 +89,7 @@ const HeaderNavigation = () => {
                   <div className=" flex justify-center items-center">
                     <div className="text-center ">
                         <Link to={`/shop?category_id=${category._id}`} className="hover:text-orange-500  capitalize cursor-pointer text-[11px]">
-                      <div className=" relative max-w-14  overflow-hidden group mx-auto pb-0.5">
+                      <div className=" relative max-w14  overflow-hidden group mx-auto pb-0.5">
                           {category?.name}
                         <span className=" w-full bottom-0 -left-20 group-hover:left-0 duration-300 absolute h-[1px] bg-orange-500"></span>
                       </div>
@@ -135,21 +135,11 @@ const HeaderNavigation = () => {
   return (
     <>
       <div className="flex justify-between items-center">
-        <div className=" flex justify-center items-center text-[12px] font-bold  ml-4 md:ml-5">
-          <div className="text-center ">
-            <div className=" relative max-w-18  overflow-hidden group mx-auto">
-              <Link to={"/"} className="text-orange-500  ">
-                Home
-              </Link>
-              <span className=" w-18 bottom-0 -left-20 group-hover:left-0 duration-300 absolute h-[1px] bg-orange-500"></span>
-            </div>
-          </div>
-        </div>
 
         <CategoryNavigation />
 
-        <div className=" relative  ml-1 !">
-          <GoRocket className=" absolute top-0.5 -left-5 sm:-left-8  md:-left-10 text-red-600" />
+        <div className="ml-1 ! min-w-25 pr-1 flex items-center justify-between">
+          <GoRocket className="top-0.5 text-red-600" />
           <p className="text-[12px] mt-0.5 font-bold animatedTextColor">
             Free Delivery
           </p>

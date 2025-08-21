@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import { RiMenu5Fill } from "react-icons/ri";
 import { MdOutlineDoubleArrow } from "react-icons/md";
+
 const UnderNavigation = () => {
   const [open, setOpen] = useState(false);
   const category_list = useSelector((state) => state?.ecommerce?.categories);
@@ -62,7 +63,7 @@ const UnderNavigation = () => {
         onClick={toggleDrawer(true)}
         className=" relative cursor-pointer  text-center"
       >
-        <RiMenu5Fill className=" text-xl text-orange-500" />
+        <RiMenu5Fill className=" text-xl text-gray-500" />
       </div>
 
       <Drawer open={open} onClose={toggleDrawer(false)}>

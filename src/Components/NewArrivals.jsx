@@ -210,7 +210,7 @@ const NewArrivals = () => {
                     setIsEnd(swiper.isEnd);
                   }}
                   breakpoints={{
-                    0: { slidesPerView: 2.3 },
+                    0: { slidesPerView: 2 },
                     600: { slidesPerView: 3 },
                     940: { slidesPerView: 4 },
                     1024: { slidesPerView: 5 },

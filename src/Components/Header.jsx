@@ -1,10 +1,8 @@
 import { useEffect, useRef } from "react";
-import Container from "./Container";
 import SearchInput from "./SearchInput";
 import { Link, useNavigate } from "react-router-dom";
 import { RiAccountCircleFill } from "react-icons/ri";
 import SideNavigation from "./SideNavigation";
-import { BiSearchAlt2 } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import SideCart from "./SideCart";
 import { IoBagCheck } from "react-icons/io5";
@@ -14,9 +12,9 @@ import { serverUrl } from "../config/ServerUrl";
 import { logout } from "../redux/E-commerce_trunk";
 import { categories, searchValue, user_info } from "../redux/EcommerceSlice";
 import toast from "react-hot-toast";
-import HeaderNavigation from "./HeaderNavigation";
 import { useState } from "react";
 import { FcSearch } from "react-icons/fc";
+import { RiHome9Fill } from "react-icons/ri";
 
 const Header = () => {
   const token = useSelector((state) => state?.ecommerce?.token);
@@ -84,9 +82,13 @@ const Header = () => {
     };
   }, [dispatch]);
   // click out side
-
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      navigate("/shop");
+    }
+  };
   return (
-    <div className="border-b border-slate-300 sticky top-0 z-50 bg-white  md:px-10 p-1 ">
+    <div className="border border-slate-300 sticky top-0 z-50 md:px-10 p-1 heading ">
       <div className="flex items-center md:gap-x-10 justify-between">
         <Link to={"/"}>
           <img
@@ -102,17 +104,18 @@ const Header = () => {
           <SearchInput />
         </div>
 
-        <div className=" flex justify-center md:hidden relative flex-1 mt-0.5 rounded mr-2  h-6 border overflow-hidden  border-orange-400">
+        <div className=" flex justify-center md:hidden relative flex-1 mt-0.5 rounded mr-1 h-7 border overflow-hidden  border-gray-400">
           <input
             onChange={(e) => dispatch(searchValue(e.target.value))}
+            onKeyDown={handleKeyDown}
             type="search"
-            className=" outline-none   text-center h-full  w-full"
+            className=" outline-none   text-center h-full  w-full bg-white/50"
           />
           <div
-            className=" border-l bg-orange-100  w-5 border-orange-200"
+            className=" border-l bg-gray-100  w-7 border-gray-200"
             onClick={() => navigate("/shop")}
           >
-            <FcSearch className=" absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer" />
+            <FcSearch className=" absolute top-1/2 right-1 -translate-y-1/2 cursor-pointer" />
           </div>
         </div>
 
@@ -144,12 +147,14 @@ const Header = () => {
             </Link>
           </div>
         )}
-        <div className="flex gap-3 items-center lg:gap-10 text-sm uppercase font-medium text-lightText">
-          <div className=" mt-2 ">
+
+        <div className="flex gap-2 items-center lg:gap-10 text-sm uppercase font-medium text-lightText">
+          <div className=" mt-2 hidden md:inline">
             <SideCart />
           </div>
           {/* profile box  */}
-          <div className=" relative">
+
+          <div className=" relative hidden md:inline">
             <div
               ref={buttonRef}
               onClick={() => setProfileBoxOpen(!isProfileBoxOpen)}
@@ -175,7 +180,12 @@ const Header = () => {
                     )}
                   </div>
                 ) : (
-                  <RiAccountCircleFill className=" text-[24px] " />
+                  <div className="h-[23px] rotate-2 w-[23px] rounded-full border border-orange-500 overflow-hidden">
+                    <img
+                      src="https://res.cloudinary.com/dpf3ipd7p/image/upload/v1755785792/profile_image_rb0bn3.jpg"
+                      alt="profile image"
+                    />
+                  </div>
                 )}
               </div>
             </div>
@@ -280,6 +290,52 @@ const Header = () => {
           <div className=" ">
             <SideNavigation />
           </div>
+        </div>
+      </div>
+
+      <div className="fixed bottom-0 left-0 w-full z-50">
+        <div className="flex items-center justify-between border border-gray-300 rounded-sm sticky bottom-0 h-9 px-2 bg-white">
+          <Link to={'/'}>
+            <span className="text-gray-700 hover:text-gray-950 ">
+              <RiHome9Fill className="text-2xl" />
+            </span>
+          </Link>
+          <div className="max-w-5 mt-2">
+            <SideCart />
+          </div>
+
+          <Link to={"personal/profile"}>
+            <div className="text-[18px] cursor-pointer text-gray-600 hover:text-gray-950 duration-300">
+              <div>
+                {personal_details ? (
+                  <div>
+                    {personal_details?.profile_image ? (
+                      <div className="h-[23px] w-[23px] rounded-full border border-gray-500 overflow-hidden">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={personal_details?.profile_image}
+                          alt="Profile"
+                        />
+                      </div>
+                    ) : (
+                      <span className=" border border-gray-500 cursor-pointer rounded-full p-1.5 min-h-[23px] min-w-[23px] max-h-[23px] max-w-[23px] flex justify-center items-center">
+                        <span className=" text-center text-sm font-bold text-orange-500">
+                          <span>{personal_details?.name[0]}</span>
+                        </span>
+                      </span>
+                    )}
+                  </div>
+                ) : (
+                  <div className="h-[23px] rotate-2 w-[23px] rounded-full border border-gray-500 overflow-hidden">
+                    <img
+                      src="https://res.cloudinary.com/dpf3ipd7p/image/upload/v1755785792/profile_image_rb0bn3.jpg"
+                      alt="profile image"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
