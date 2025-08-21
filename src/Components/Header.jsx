@@ -86,8 +86,8 @@ const Header = () => {
   // click out side
 
   return (
-    <div className="border-b-[1px] border-slate-300 sticky top-0 z-50 bg-white  md:px-10 p-1 ">
-      <div className="py- flex items-center md:gap-x-10 justify-between border-b border-gray-300">
+    <div className="border-b border-slate-300 sticky top-0 z-50 bg-white  md:px-10 p-1 ">
+      <div className="flex items-center md:gap-x-10 justify-between">
         <Link to={"/"}>
           <img
             className="w-7 h-auto mx-2 object-contain"
@@ -102,7 +102,7 @@ const Header = () => {
           <SearchInput />
         </div>
 
-        <div className=" flex justify-center md:hidden relative flex-1 mt-0.5 rounded-xs mr-2  h-6 border overflow-hidden  border-orange-400">
+        <div className=" flex justify-center md:hidden relative flex-1 mt-0.5 rounded mr-2  h-6 border overflow-hidden  border-orange-400">
           <input
             onChange={(e) => dispatch(searchValue(e.target.value))}
             type="search"
@@ -281,10 +281,6 @@ const Header = () => {
             <SideNavigation />
           </div>
         </div>
-      </div>
-
-      <div className=" pt-1">
-        <HeaderNavigation />
       </div>
     </div>
   );

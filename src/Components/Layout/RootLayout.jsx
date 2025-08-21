@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import Header from "../Header";
 import Footer from "../Footer";
@@ -7,6 +6,7 @@ import { Provider } from "react-redux";
 import { persistor, store } from "../../redux/Store";
 import { PersistGate } from "redux-persist/integration/react";
 import { Toaster } from "react-hot-toast";
+import HeaderNavigation from "../HeaderNavigation";
 
 const RouteLayout = () => {
 
@@ -16,6 +16,9 @@ const RouteLayout = () => {
       <PersistGate loading={null} persistor={persistor}>
         <Toaster />
         <Header />
+        <div className=" py-2  bg-white z-40">
+          <HeaderNavigation />
+        </div>
         <ScrollRestoration />
         <Outlet />
         <ServicesTag />
