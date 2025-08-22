@@ -44,7 +44,6 @@ const Shop = () => {
     setOpen((prev) => !prev);
   };
   const search = useSelector((state) => state?.ecommerce?.searchValue);
-console.log(categoryID);
   const handleCheckboxChange = (e, state, setState) => {
     const value = e.target.value;
     if (e.target.checked) {
@@ -68,7 +67,7 @@ console.log(categoryID);
   useEffect(() => {
     // const controller = new AbortController();
     const fetchingData = async () => {
-
+console.log(categories);
       try {
         setLoading(true);
         const response = await axios.post(
