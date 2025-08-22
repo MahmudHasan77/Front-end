@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
@@ -44,25 +45,26 @@ const Shop = () => {
     setOpen((prev) => !prev);
   };
   const search = useSelector((state) => state?.ecommerce?.searchValue);
-  const handleCheckboxChange = (e, state, setState) => {
-    const value = e.target.value;
-    if (e.target.checked) {
-      setState([...state, value]);
-    } else {
-      setState(state.filter((item) => item !== value));
-    }
-  };
+const handleCheckboxChange = (e, state, setState) => {
+  const value = e.target.value.toString(); // <-- convert to string
+  if (e.target.checked) {
+    setState([...state, value]);
+  } else {
+    setState(state.filter((item) => item !== value));
+  }
+};
+
 
   const handlePriceChange = (value) => {
     setPrice(value);
   };
 
-  useEffect(() => {
-    if (categoryID && !categories.includes(categoryID)) {
-      setCategories((prev) => [...prev, categoryID]);
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ categoryID]);
+useEffect(() => {
+  if (categoryID && !categories.includes(categoryID.toString())) {
+    setCategories((prev) => [...prev, categoryID.toString()]);
+  }
+}, [categoryID]);
+
 
   useEffect(() => {
     // const controller = new AbortController();
