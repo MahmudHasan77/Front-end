@@ -92,7 +92,7 @@ const Header = () => {
       <div className="relative bg-gray-100">
         {/* Top Heading */}
 
-          <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 border-b border-gray-300 h-11 pt-[2px]">
+          <header className="fixed top-0 left-0 px-2 right-0 z-50 bg-white border-b border-gray-100 shadow h-11 pt-[2px]">
             <div className="flex items-center md:gap-x-10 justify-between">
               <Link to={"/"}>
                 <img
@@ -108,13 +108,13 @@ const Header = () => {
                 <SearchInput />
               </div>
 
-              <div className=" flex justify-center md:hidden relative flex-1 mt-0.5 rounded mr-1 h-7 border overflow-hidden  border-gray-300">
+              <div className=" flex justify-center md:hidden relative flex-1 mt-0.5 rounded mr-1 h-7  overflow-hidden border border-gray-100">
                 <input
                   onChange={(e) => dispatch(searchValue(e.target.value))}
                   onKeyDown={handleKeyDown}
                 type="search"
                 placeholder="Search..."
-                  className=" outline-none   text-center h-full  w-full bg-white/50 text-sm"
+                  className=" outline-none   text-center h-full  w-full bg-gray-100 text-sm"
                 />
                 <div
                   className=" border-l bg-gray-100  w-7 border-gray-200"

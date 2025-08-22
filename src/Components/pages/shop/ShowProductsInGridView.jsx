@@ -99,7 +99,7 @@ const ShowProductsInGridView = ({ products, isLoading }) => {
                       </h1>
                     </div>
                     <div className="text-[11px]  text-gray-600">
-                      <span>{product?.ram}</span> /
+                      <span>{product?.ram}</span> 
                       <span> {product?.storage}</span>
                     </div>
                     <div className="">

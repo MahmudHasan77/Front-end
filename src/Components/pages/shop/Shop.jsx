@@ -180,8 +180,8 @@ const Shop = () => {
       <ShopPageHeader />
 
       {/* Header with Filter & View Options */}
-      <div className="flex bg-zinc-50 h-10 w-full items-center border border-green-200">
-        <div className="flex items-center min-w-[33%] max-w-[33%] md:min-w-[20%] md:max-w-[20%] bg-zinc-100 border border-gray-300 px-1 h-full text-center">
+      <div className="flex bg-zinc-50 h-10 w-full items-center border border-green-50">
+        <div className="flex items-center min-w-[33%] max-w-[33%] md:min-w-[20%] md:max-w-[20%] bg-zinc-100 border-r border-gray-100 px-1 h-full text-center">
           <p className="font-bold m-auto h-full pt-2 text-xs md:text-[15px]">
             Filter
           </p>
@@ -229,7 +229,7 @@ const Shop = () => {
           <div className="relative w-25">
             <select
               onChange={(e) => setSort(e.target.value)}
-              className="w-full border py-1 pl-3 pr-8 border-gray-300 outline-none appearance-none"
+              className="w-full border py-1 pl-3 pr-8 border-gray-100 outline-none appearance-none"
             >
               <option>Sort By</option>
               <option value={"descending"}>High To Low</option>

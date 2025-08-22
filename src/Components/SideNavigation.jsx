@@ -63,7 +63,7 @@ const UnderNavigation = () => {
         onClick={toggleDrawer(true)}
         className=" relative cursor-pointer  text-center"
       >
-        <RiMenu5Fill className=" text-xl text-gray-500" />
+        <RiMenu5Fill className=" text-2xl text-gray-500" />
       </div>
 
       <Drawer open={open} onClose={toggleDrawer(false)}>
