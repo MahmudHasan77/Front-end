@@ -92,7 +92,7 @@ const Header = () => {
       <div className="relative bg-gray-100">
         {/* Top Heading */}
 
-          <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 border-b border-gray-300 h-10 pt-[1px]">
+          <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 border-b border-gray-300 h-11 pt-[2px]">
             <div className="flex items-center md:gap-x-10 justify-between">
               <Link to={"/"}>
                 <img
