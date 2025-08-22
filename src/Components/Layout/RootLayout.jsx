@@ -16,7 +16,7 @@ const RouteLayout = () => {
       <PersistGate loading={null} persistor={persistor}>
         <Toaster />
         <Header />
-        <div className=" py-2  bg-white z-40">
+        <div className=" p-2  bg-white z-40 border pt-10">
           <HeaderNavigation />
         </div>
         <ScrollRestoration />

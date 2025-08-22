@@ -621,8 +621,18 @@ animation-iteration-count: infinite;
   box-shadow: #ff0000 0px 0px 10px;
 }
 
-.heading{
-  background-color: rgba(255, 255, 255, 0.414);
-  backdrop-filter: blue(5px);
-  -webkit-backdrop-filter: blur(5px);
+/* .heading {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  background: white;
+} */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; /* iPhone Safari smooth scroll */
 }
+
+
