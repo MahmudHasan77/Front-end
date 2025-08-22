@@ -11,7 +11,6 @@ import Button from "@mui/material/Button";
 import { useSelector } from "react-redux";
 import { toast } from "react-hot-toast";
 import axios from "axios";
-import { serverUrl } from "./../../../config/ServerUrl";
 import Pagination from "@mui/material/Pagination";
 import { IoGrid } from "react-icons/io5";
 import { FaThList } from "react-icons/fa";
@@ -23,6 +22,7 @@ import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 import { IconButton } from "@mui/material";
 import { FiFilter } from "react-icons/fi";
 import { BiFilter } from "react-icons/bi";
+import { serverUrl } from "../../../config/ServerUrl";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -67,11 +67,10 @@ const Shop = () => {
   useEffect(() => {
     // const controller = new AbortController();
     const fetchingData = async () => {
-console.log(categories);
       try {
         setLoading(true);
         const response = await axios.post(
-          `${serverUrl}/api/product/filter_product_with_pagination?page=${page}&sort=${sort}&search=${search}`,
+          serverUrl+`/api/product/filter_product_with_pagination?page=${page}&sort=${sort}&search=${search}`,
           {
             categories,
             types,

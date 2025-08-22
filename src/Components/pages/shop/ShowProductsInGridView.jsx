@@ -48,7 +48,6 @@ const ShowProductsInGridView = ({ products, isLoading }) => {
         <>
           <div className="flex flex-wrap gap-3 md:gap-5 justify-center">
             {products?.map((product) => (
-              <>
                 <div
                   key={product?._id}
                   className="border w-[150px] h-63 md:w-[170px]   border-gray-300 my-2  customshadow hover:scale-105 group hover:shadow-sm  duration-300 overflow-hidden rounded-t-sm bg-gray-100"
@@ -119,7 +118,6 @@ const ShowProductsInGridView = ({ products, isLoading }) => {
                     </div>
                   </div>
                 </div>
-              </>
             ))}
             {isZoomOpen && (
               <ZoomProduct
