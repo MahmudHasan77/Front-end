@@ -40,7 +40,7 @@ const Shop = () => {
   const categoryID = params.get("category_id");
   const [open, setOpen] = useState(false);
   const [sort, setSort] = useState();
-
+console.log(categoryID)
   const toggleDrawer = () => {
     setOpen((prev) => !prev);
   };

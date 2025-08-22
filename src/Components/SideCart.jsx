@@ -277,14 +277,14 @@ export default function SideCart() {
   return (
     <div>
       {/* <Button onClick={toggleDrawer(true)}>Open drawer</Button> */}
-      <span className=" cursor-context-menu" onClick={toggleDrawer(true)}>
+      <div className=" cursor-context-menu" onClick={toggleDrawer(true)}>
         <div className="relative group max-w-5">
           <FaOpencart className=" text-lg text-gray-700 hover:text-gray-900 duration-300  " />
           <span className=" -top-3 right-0  absolute text-gray-600 border text-[7px]   rounded-full h-3.5 w-3.5 flex items-center justify-center">
             {totalQuantity ? totalQuantity : 0}
           </span>
         </div>
-      </span>
+      </div>
       <Drawer open={open} onClose={toggleDrawer(false)} anchor={"right"}>
         {DrawerList}
       </Drawer>
