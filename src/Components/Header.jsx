@@ -112,8 +112,9 @@ const Header = () => {
                 <input
                   onChange={(e) => dispatch(searchValue(e.target.value))}
                   onKeyDown={handleKeyDown}
-                  type="search"
-                  className=" outline-none   text-center h-full  w-full bg-white/50"
+                type="search"
+                placeholder="Search..."
+                  className=" outline-none   text-center h-full  w-full bg-white/50 text-sm"
                 />
                 <div
                   className=" border-l bg-gray-100  w-7 border-gray-200"
