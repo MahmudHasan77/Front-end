@@ -301,7 +301,7 @@ const Header = () => {
 
         {/* bottom heading  */}
         <footer
-          className="fixed bottom-0 left-0 right-0 z-50 bg-white shadow-inner border-t border-gray-200 h-9 flex items-center justify-center
+          className="fixed bottom-0 left-0 right-0 md:hidden z-50 bg-white shadow-inner border-t border-gray-200 h-9 flex items-center justify-center
     transform will-change-transform"
         >
           <div className=" w-full z-50">
