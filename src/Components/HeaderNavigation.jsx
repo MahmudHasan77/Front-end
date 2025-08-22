@@ -69,8 +69,8 @@ const HeaderNavigation = () => {
               spaceBetween={20}
               slidesPerView={4}
               breakpoints={{
-                0: { slidesPerView: 4 },
-                600: { slidesPerView: 5 },
+                0: { slidesPerView: 3 },
+                600: { slidesPerView: 4 },
                 940: { slidesPerView: 5 },
                 1024: { slidesPerView:7 },
               }}
