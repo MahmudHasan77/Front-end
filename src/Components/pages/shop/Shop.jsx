@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
@@ -46,7 +45,7 @@ const Shop = () => {
   };
   const search = useSelector((state) => state?.ecommerce?.searchValue);
 const handleCheckboxChange = (e, state, setState) => {
-  const value = e.target.value.toString(); // <-- convert to string
+  const value = e.target.value.toString(); 
   if (e.target.checked) {
     setState([...state, value]);
   } else {
@@ -63,6 +62,7 @@ useEffect(() => {
   if (categoryID && !categories.includes(categoryID.toString())) {
     setCategories((prev) => [...prev, categoryID.toString()]);
   }
+// eslint-disable-next-line react-hooks/exhaustive-deps
 }, [categoryID]);
 
 
