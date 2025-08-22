@@ -40,12 +40,11 @@ const Shop = () => {
   const categoryID = params.get("category_id");
   const [open, setOpen] = useState(false);
   const [sort, setSort] = useState();
-console.log(categoryID)
   const toggleDrawer = () => {
     setOpen((prev) => !prev);
   };
   const search = useSelector((state) => state?.ecommerce?.searchValue);
-
+console.log(categoryID);
   const handleCheckboxChange = (e, state, setState) => {
     const value = e.target.value;
     if (e.target.checked) {
@@ -69,6 +68,7 @@ console.log(categoryID)
   useEffect(() => {
     // const controller = new AbortController();
     const fetchingData = async () => {
+
       try {
         setLoading(true);
         const response = await axios.post(
@@ -114,7 +114,7 @@ console.log(categoryID)
           <div className="text-xs h-50 overflow-y-auto styleScrollbar gap-2 my-2 grid border bg-white customshadow border-zinc-50">
             {category_list?.map((category) => {
               return (
-                <div className=" grid justify-between capitalize">
+                <div key={category?._id} className=" grid justify-between capitalize">
                   <div className="flex flex-col items-center justify-between cursor-pointer hover:text-orange-500 ">
                     <FormControlLabel
                       control={
@@ -161,7 +161,7 @@ console.log(categoryID)
                           <div className="border border-gray-300  px-2 w-full">
                             {category?.children?.map((type) => {
                               return (
-                                <span className=" flex items-center cursor-pointer hover:text-orange-500 justify-between my-1 py-1 text-[10px]">
+                                <span key={type?._id} className=" flex items-center cursor-pointer hover:text-orange-500 justify-between my-1 py-1 text-[10px]">
                                   <input
                                     checked={types.includes(type?._id)}
                                     value={type?._id}

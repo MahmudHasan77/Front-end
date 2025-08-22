@@ -50,7 +50,7 @@ const ShowProductsInGridView = ({ products, isLoading }) => {
             {products?.map((product) => (
               <>
                 <div
-                  key={product._id}
+                  key={product?._id}
                   className="border w-[150px] h-63 md:w-[170px]   border-gray-300 my-2  customshadow hover:scale-105 group hover:shadow-sm  duration-300 overflow-hidden rounded-t-sm bg-gray-100"
                 >
                   <div className=" m-auto relative overflow-hidden w-full md:w-full h-30">
